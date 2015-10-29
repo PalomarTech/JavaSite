@@ -1,10 +1,13 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 from .models import Clan_Meta_Data
 
 def index(request):
-    return HttpResponse("View Test")
+    return HttpResponse("Clan Hub")
 
-def basic_info(request,)
-
+def clanpage(request, name):
+    clan_object = Clan_Meta_Data.objects.get(name = name)
+    context = {'Object': clan_object, 'membercount': clan_object.member_count()}
+    return render(request, 'clans/clanpage/index.html', context)
 # Create your views here.
