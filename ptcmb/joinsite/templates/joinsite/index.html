@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ Object.name }}</title>
+  </head>
+  <body>
+    <h3>Time to create an account!</h3>
+    <form action="/join/" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+  </body>
+</html>

@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'clans',
     'home',
-    'members'
+    'members',
+    'joinsite'
 )
 
 MIDDLEWARE_CLASSES = (

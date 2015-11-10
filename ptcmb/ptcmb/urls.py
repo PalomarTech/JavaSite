@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^m/', include('members.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'home.views.index'),
+    url(r'^join/', include('joinsite.urls'))
 ]
