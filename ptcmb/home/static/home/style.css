@@ -1,0 +1,52 @@
+/* color palette = http://www.color-hex.com/color-palette/389 */
+
+body {
+  background-color: #be9b7b;
+  margin: 0;
+}
+
+#header{
+  background-color: #854442;
+  text-align: center;
+  color: #fff4e6;
+  font-family: Oswald;
+}
+
+#sitebody{
+  /*background-color: #fae596;*/
+  width: 100%;
+  padding: 1px 5px 1px 5px;
+}
+
+.halfelement {
+  display: inline-block;
+  width : 47.8%;
+  background-color: #4b3832;
+  border-radius: 25px;
+  padding: 1%;
+
+}
+
+#intro {
+  float: left;
+  border:
+}
+
+#links {
+ float: right;
+}
+
+#intro p{
+  color: #fff4e6;
+  font-family: Oswald;
+}
+
+h4{
+  font-family: Oswald;
+  color: #fff4e6;
+}
+
+a {
+  font-family: Oswald;
+  color: #fff4e6;
+}

@@ -1,23 +1,37 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <title>Project Dugong</title>
+    <link rel="icon" type="image/jpg" href="https://ssl.bigstockimages.com/9/0/3/small2/30989132.jpg">
   </head>
   <body>
-    <h1>Welcome to Project Dugong!</h1>
-    <br>
-    <img src="http://www.habitatadvocate.com.au/wp-content/uploads/2012/03/dugong.jpg">
-    <br>
-    <p size=8px>Project Dugong is a temporary name until we can manage to come up with a
+    <div id="header">
+    <h1>Project Dugong</h1>
+  </div>
+    <div id ="sitebody">
+    <div class="halfelement" id = "intro">
+    <p>Project Dugong is a temporary name until we can manage to come up with a
     good name for the site. It has been chosen at random so that we may create
     the genderal look of the site without having a name.</p>
-    <br>
-    <br>
+   </div>
+   <div class="halfelement" id = "links">
     <h4>Current Links</h4>
     <a href="/">Hompage</a><br>
     <a href="/admin">Admin Panel</a><br>
     <a href="/m/TestUser">User Example</a><br>
     <a href="/clans/TestClan">Clan Example</a><br>
     <a href="/join">Join the Site!</a><br>
+  </div>
+  <div class = "halfelement" id = "login" >
+  <form action="/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+  </form>
+  </div>
+    </div>
   </body>
 </html>
