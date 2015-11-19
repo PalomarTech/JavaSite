@@ -4,7 +4,7 @@ from django.shortcuts import render
 from .models import Clan_Meta_Data
 
 def index(request):
-    return HttpResponse("Clan Hub")
+        return render(request, 'clans/clanhub/index.html')
 
 def clanpage(request, name):
     clan_object = Clan_Meta_Data.objects.get(name = name)

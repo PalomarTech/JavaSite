@@ -9,8 +9,28 @@
   </head>
   <body>
     <div id="header">
-    <h1>Project Dugong</h1>
-  </div>
+      {% if user.is_authenticated %}
+      <div id="left-header">
+        <a class = "headerlinks" href="/logout/">Logout</a>
+        <a class = "headerlinks" href="/m/{{ user.username }}">Profile</a>
+        <a class = "headerlinks" href="/">Settings</a><br>
+        <a class = "headerlinks" href="/m/">Member Hub</a>
+        <a class = "headerlinks" href="/clans/">Clan Hub</a>
+        <a class = "headerlinks" href="/">Messages</a>
+      </div>
+        {% else %}
+        <div id="left-header">
+        <form action="/" method="post">
+          {% csrf_token %}
+          {{ form }}
+          <input type="submit" value="Submit" />
+         </form>
+      </div>
+     {% endif %}
+      <div id="right-header">
+        <h1>Project Dugong</h1>
+      </div>
+    </div>
     <div id ="sitebody">
     <div class="halfelement" id = "intro">
     <p>Project Dugong is a temporary name until we can manage to come up with a
@@ -26,11 +46,19 @@
     <a href="/join">Join the Site!</a><br>
   </div>
   <div class = "halfelement" id = "login" >
+  {% if user.is_authenticated %}
+    <p>User is logged in!</p>
+    <a href="/logout/">Logout</a><br />
+  {% else %}
   <form action="/" method="post">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
     <input type="submit" value="Submit" />
   </form>
+  <form action="/join/">
+    <input type="submit" value="No account? Register!">
+  </form>
+  {% endif %}
   </div>
     </div>
   </body>

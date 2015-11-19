@@ -10,6 +10,36 @@ body {
   text-align: center;
   color: #fff4e6;
   font-family: Oswald;
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 5px;
+  height: 50px;
+}
+
+#left-header {
+  width: 74%;
+  float: left;
+}
+
+.headerlinks {
+  width: 125px;
+  padding: auto;
+  float: left;
+  height:25px;
+}
+
+.headerlinks:hover {
+    background-color: #754542;
+}
+
+#right-header{
+  width: 24%;
+  float: right;
+  border-left: 2px solid #be9b7b;
+}
+
+#right-header > h1 {
+  margin: 0;
 }
 
 #sitebody{
@@ -24,6 +54,8 @@ body {
   background-color: #4b3832;
   border-radius: 25px;
   padding: 1%;
+  margin-top: 1px;
+  margin-bottom: 1px;
 
 }
 

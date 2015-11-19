@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^m/', include('members.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'home.views.index'),
+    url(r'^logout/$', 'home.views.user_logout'),
     url(r'^join/', include('joinsite.urls'))
 ]
